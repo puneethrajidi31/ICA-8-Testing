@@ -1,8 +1,16 @@
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
     public class urinals {
-        public static void main(String[] args) {
+        public static void main(String[] args) throws IOException {
+            //Author: Puneeth Reddy Rajidi
+
+            //File reading
+            readfile("src\\file1.dat");
+
 
         }
 
@@ -74,4 +82,61 @@ import java.util.Scanner;
 
         }
 
-    }
+        public static boolean filefound(String path) {
+            try {
+                File file = new File(path);
+                Scanner s = new Scanner(file);
+                return true;
+            } catch (FileNotFoundException e) {
+                return false;
+            }
+
+        }
+
+
+        public static boolean emptyfilecheck(String path) {
+            try {
+                File file = new File(path);
+                Scanner s = new Scanner(file);
+                return s.hasNextLine();
+            } catch (Exception e) {
+                return false;
+            }
+        }
+
+
+
+
+
+        public static void readfile(String path) throws IOException
+        {
+
+            if(filefound(path)==false)
+            {
+                System.out.println("File not found");
+                return;
+            }
+            if(emptyfilecheck(path)==false)
+            {
+                System.out.println("Empty file");
+                return;
+            }
+            File file = new File(path);
+            Scanner s = new Scanner(file);
+            while(s.hasNextLine()) {
+                    String y=s.nextLine();
+                    boolean gh = goodString(y);
+                    if (gh == false) {
+                        System.out.println("-1");
+                    }
+                    else {
+                        int x = urinalscount(y);
+                        System.out.println(x);
+                    }
+                }
+            }
+
+
+
+        }
+
