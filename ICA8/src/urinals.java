@@ -1,7 +1,14 @@
-public class Main {
-public int quotient(int x,int y){
-    if(y==0)
-        throw new IllegalArgumentException("y cannot be zero");
-    return x/y;
+
+import java.util.Scanner;
+
+    public class urinals {
+        public static void main(String[] args) {
+
+        }
+        public static boolean goodString(String str){
+            System.out.println("Not yet implemented");
+            return true;
+        }
+
+
     }
-}
