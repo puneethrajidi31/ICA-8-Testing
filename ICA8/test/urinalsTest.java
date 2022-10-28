@@ -31,4 +31,11 @@ class urinalsTest {
     }
 
 
+    @Test
+    public void urinalscount() {
+
+        System.out.println("====== Puneeth Reddy == TEST ONE EXECUTED =======");
+        assertEquals(1,urinals.urinalscount("10001"));
+    }
 }
+
