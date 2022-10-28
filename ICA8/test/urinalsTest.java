@@ -19,6 +19,8 @@ class urinalsTest {
         assertEquals(true,urinals.goodString("00000"));
         System.out.println("====== Puneeth Reddy == TEST FOUR EXECUTED =======");
         assertEquals(true,urinals.goodString("0000"));
+        System.out.println("====== Puneeth Reddy == TEST FIVE EXECUTED =======");
+        assertEquals(true,urinals.goodString("01000"));
 
     }
 
