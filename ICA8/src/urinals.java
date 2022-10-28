@@ -2,6 +2,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Scanner;
 
     public class urinals {
@@ -123,15 +125,17 @@ import java.util.Scanner;
             }
             File file = new File(path);
             Scanner s = new Scanner(file);
+            Path output=Path.of("src\\output.dat");
             while(s.hasNextLine()) {
                     String y=s.nextLine();
                     boolean gh = goodString(y);
                     if (gh == false) {
-                        System.out.println("-1");
+                        Files.writeString(output,"-1");
+
                     }
                     else {
                         int x = urinalscount(y);
-                        System.out.println(x);
+                        Files.writeString(output,String.valueOf(x));
                     }
                 }
             }
