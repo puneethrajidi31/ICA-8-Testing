@@ -40,6 +40,8 @@ class urinalsTest {
         assertEquals(0,urinals.urinalscount("1001"));
         System.out.println("====== Puneeth Reddy == TEST THREE EXECUTED =======");
         assertEquals(3,urinals.urinalscount("00000"));
+        System.out.println("====== Puneeth Reddy == TEST FOUR EXECUTED =======");
+        assertEquals(2,urinals.urinalscount("0000"));
     }
 }
 
